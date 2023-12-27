@@ -137,3 +137,25 @@ Example: A script from example.com can't access resources from example.org.
 **OAuth:** is an open standard for authorization. It allows users to grant access to their data stored on one website to another website without giving them their password. It's commonly used by websites like Facebook, Google, and Twitter. These are the pop ups that ask you to log in with your Facebook, Google, or Twitter account.
 
 **JSON Web Token:** A standard for signed tokens. It's commonly used for authentication. It consists of three parts: header, payload, and signature. The header contains information about the token. The payload contains information about the user. The signature is used to verify the token.
+
+# How browsers render content
+
+Crititcal rendering path: The steps that the browser takes to convert HTML, CSS, and JavaScript into pixels on the screen.
+
+1. **Construct the DOM tree:** The browser parses the HTML and constructs the DOM tree. The DOM tree is a tree representation of the HTML. It consists of nodes. Each node represents an HTML element. The DOM tree is used to render the page.
+2. **Construct the CSSOM tree:** The browser parses the CSS and constructs the CSSOM tree. The CSSOM tree is a tree representation of the CSS. It consists of nodes. Each node represents a CSS rule. The CSSOM tree is used to render the page.
+3. **Combine the DOM tree and the CSSOM tree into the render tree:** The browser combines the DOM tree and the CSSOM tree into the render tree. The render tree is a tree representation of the DOM tree and the CSSOM tree. It consists of nodes. Each node represents a visible element. The render tree is used to render the page.
+4. **Layout the render tree:** The browser calculates the position and size of each node in the render tree. This is called layout. Layout is used to render the page.
+5. **Paint the render tree:** The browser paints each node in the render tree. This is called paint. Paint is used to render the page.
+
+## Preload scanner
+
+The preload scanner is a component of the browser that parses the HTML and looks for resources that need to be preloaded. It's used to preload resources that are needed to render the page. If we didn't preload these resources, the browser would have to wait for them to be downloaded before rendering the page. This causes a delay in rendering the page, which is bad for performance.
+
+## Key performance metrics
+
+**First Contentful Paint (FCP):** The time it takes for the browser to render the first piece of content.
+
+**First Meaningful Paint (FMP):** The time it takes for the browser to render the first piece of content that is useful to the user e.g. text, images, etc.
+
+**Time to Interactive (TTI):** The time it takes for the browser to become interactive. A browser is interactive when the user can interact with it e.g. click on links, fill out forms, etc.
